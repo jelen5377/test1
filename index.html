@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Kalkulacka</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <p class="eyebrow">GitHub Pages Demo</p>
+      <h1>Cloud Kalkulacka</h1>
+      <p class="intro">Jednoducha staticka aplikace, kterou pujde rovnou zverejnit pres GitHub Pages.</p>
+
+      <form id="calculator-form" class="calculator">
+        <label>
+          Prvni cislo
+          <input id="number-a" type="number" step="any" value="10" required>
+        </label>
+
+        <label>
+          Druhe cislo
+          <input id="number-b" type="number" step="any" value="5" required>
+        </label>
+
+        <label>
+          Operace
+          <select id="operation">
+            <option value="add">Scitani</option>
+            <option value="subtract">Odcitani</option>
+            <option value="multiply">Nasobeni</option>
+            <option value="divide">Deleni</option>
+          </select>
+        </label>
+
+        <button type="submit">Spocitat</button>
+      </form>
+
+      <div class="result" aria-live="polite">
+        <span>Vysledek</span>
+        <strong id="result-value">15</strong>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

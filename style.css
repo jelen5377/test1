@@ -1,0 +1,125 @@
+:root {
+  --bg: #f4efe6;
+  --panel: #fffaf2;
+  --ink: #1d2a30;
+  --muted: #627178;
+  --accent: #ff7a00;
+  --accent-dark: #cc5f00;
+  --line: #e7dccd;
+  --shadow: 0 20px 50px rgba(29, 42, 48, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(255, 122, 0, 0.18), transparent 28%),
+    linear-gradient(135deg, #f3ecdf 0%, #f7f3eb 45%, #efe5d3 100%);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(100%, 520px);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: var(--accent-dark);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 0.95;
+}
+
+.intro {
+  margin: 14px 0 24px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.calculator {
+  display: grid;
+  gap: 16px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  padding: 14px 16px;
+  font: inherit;
+}
+
+input,
+select {
+  background: #fff;
+}
+
+button {
+  border: 0;
+  background: var(--accent);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.result {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+}
+
+.result span {
+  color: var(--muted);
+}
+
+.result strong {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+}
+
+@media (max-width: 560px) {
+  .card {
+    padding: 24px;
+    border-radius: 22px;
+  }
+}
